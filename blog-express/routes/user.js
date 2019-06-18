@@ -13,7 +13,7 @@ router.post('/login', function(req, res, next) {
   })
 });
 
-router.get('/session-test', function(req, res, next) {
+router.get  ('/session-test', function(req, res, next) {
     const session = req.session
     if(session.viewNum == null){
         session.viewNum = 0
