@@ -48,13 +48,7 @@ const handleBlobRouter = (req, res) => {
             //未登录
             return loginCheckResult
         }
-        req.body.author = req.session.username
-        const result = newBlog(req.body)
-        return result.then(data=>{
-            return new SuccessModel(data)
-        }).catch(err=>{
-            return new ErrorModel(err)
-        })
+       
     }
 
     //update blob
